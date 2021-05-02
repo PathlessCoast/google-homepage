@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="normalize.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                font-size: 14px;
+                font-family: arial,sans-serif;
+                color: #222;
+            }
+            a:hover,a:active {
+                text-decoration: underline
+            }
+            header {
+                height: 48px;
+                padding: 6px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .izq {
+                display: flex;
+            }
+            .dcha {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+            .links {
+                padding-right: 15px;
+                display: flex;
+            }
+            .icons {
+                margin:0 8px;
+                padding: 4px;
+                display: flex;
+                align-items: center;
+            }
+            .sobre {
+                margin: 0 5px 0 15px;
+                padding: 5px;
+            }
+            .tienda {
+                margin: 0 5px;
+                padding: 5px;
+            }
+            .gmail {
+                font-size: 13px;
+                padding-left: 15px;
+                font-family: Arial,sans-serif;
+            }
+            .imgs {
+                font-size: 13px;
+                font-family: Arial,sans-serif;
+                padding-left: 15px;
+            }
+            .apps:hover {
+                text-decoration: none;
+            }
+            .profile {
+                background-size: 32px 32px;
+                border: 0;
+                border-radius: 50%;
+                display: inline;
+                margin-left: 20px;
+                height: 32px;
+                width: 32px;
+                z-index: 0;
+            }
+            .profile:hover{
+                box-shadow: 0 0 0 4px #ebecec;
+            }
+            .center {
+                display: flex;
+                align-items: center;
+            }
+
+/*----------------------------------------------------MAIN--------------------------------------------------------*/
+            main {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+            }
+            .container {
+                width: 100%;
+            }
+            .logo {
+                max-height: 92px;
+                position: relative;
+                height: 100%;
+                margin-top: 46px;
+            }
+            #googlelogo {
+                margin: auto;
+                display: block;
+            }
+            .buscador {
+                text-align: center;
+                padding: 20px;
+                padding-bottom: 0;
+            }
+            form {
+                padding-top: 6px;
+            }
+            .bar{
+                margin:0 auto;
+                width:582px;
+                height: 44px;
+                border-radius:24px;
+                border:1px solid #dcdcdc;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .bar:hover{
+                box-shadow: 1px 1px 8px 1px #dcdcdc;
+            }
+            .bar:focus-within{
+                box-shadow: 1px 1px 8px 1px #dcdcdc;
+                outline:none;
+            }
+            .lupa {
+                height: 20px;
+                width: auto;
+            }
+            .searchbar{
+                height:34px;
+                border: none;
+                width:487px;
+                font-size:16px;
+                outline: none;
+            }
+            .voice{
+                height:20px;
+                width: auto;
+                margin-right: 10px;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            .botones {
+                padding-top: 18px;
+                height: 70px;
+            }
+            .boton {
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                border-radius: 4px;
+                color: #3c4043;
+                font-family: arial,sans-serif;
+                font-size: 14px;
+                margin: 11px 4px;
+                padding: 0 16px;
+                line-height: 27px;
+                height: 36px;
+                min-width: 54px;
+                text-align: center;
+                cursor: pointer;
+                user-select: none;
+            }
+            .boton:hover {
+                box-shadow: 0 1px 1px rgba(0,0,0,.1);
+                background-color: #f8f9fa;
+                border: 1px solid #dadce0;
+                color: #202124
+            }
+            .idiomas {
+                color: #1a0dab;
+            }
+            #text {
+                font-size: 13px;
+            }
+            #text a {
+                padding: 0 3px;
+            }
+
+/*----------------------------------------------------------------FOOTER------------------------------------------------*/
+            footer {
+                background: #f2f2f2;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+            .pais {
+                padding: 15px 30px;
+                border-bottom: 1px solid #dadce0;
+                font-size: 15px;
+                color: rgba(0,0,0,.54);
+            }
+            .piepadding {
+                padding: 0 20px;
+            }
+            .pienlace {
+                display: block;
+                padding: 15px;
+                white-space: nowrap;
+                color: #70757a;
+            }
+            .item1 {
+                justify-content: flex-start;
+                min-width: 30%;
+                order: 1;
+            }
+            .item2 {
+                order: 2;
+                justify-self: center;
+            }
+            @media (max-width: 1200px) {
+                .item2 {
+                    order: 0;
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+            .piepagina {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            @media (max-width: 1200px) {
+                .piepagina {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                }
+            }
+            .item3 {
+                justify-content: flex-end;
+                min-width: 30%;
+                order: 3;
+            }
+            .hojita {
+                height: 14px;
+                margin-right: 6px;
+                display: inline;
+            }
+            .arriba {
+                white-space: nowrap;
+                vertical-align: top;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="izq">
+                <a class="sobre" href="#">Sobre Google</a>
+                <a class="tienda" href="#">Tienda</a>
+            </div>
+            <div class="dcha">
+                <div class="links">
+                    <a class="gmail" href="#">Gmail</a>
+                    <a class="imgs" href="#">Imágenes</a>
+                </div>
+
+                <div class="icons">
+                    <a href="#" class="center apps"><span class="material-icons">apps</span></a>
+                    <a href="#" class="center"><img class="profile" src="https://lh3.googleusercontent.com/ogw/ADGmqu_orvaXUKi5VTZpz-cxRgYnZPyIZ6vUrvzEmq7A=s32-c-mo" alt="profile"></a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="logo">
+                    <img id="googlelogo" src="Images/googlelogo.png" alt="">
+                </div>
+            </div>
+            <div class="buscador">
+                <form action="">
+                    <div class="bar">
+                        <label for="searchbar" class="lupa"><span class="material-icons" style="font-size: 20px; color:#9AA0A6;">search</span></label>
+                        <input id="searchbar" class="searchbar" type="text">
+                        <a href="#"><img class="voice" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png" title="Search by Voice"></a>
+                    </div>
+                    <div class="botones">
+                        <button class="boton" type="button">Buscar con Google</button>
+                        <button class="boton" type="button">Voy a tener suerte</button>
+                    </div>
+                </form>
+            </div>
+            <div id="text">
+                Ofrecido por Google en: <a class="idiomas" href="#">English</a>  <a class="idiomas" href="#">catalá</a>  <a class="idiomas" href="#">galego</a>  <a class="idiomas" href="#">euskara</a>
+            </div>
+        </main>
+        <footer>
+            <div class="pais">España</div>
+            <div class="piepagina piepadding">
+                <div class="piepagina item1">
+                    <a class="pienlace" href="#">Publicidad</a>
+                    <a class="pienlace" href="#">Empresa</a>
+                    <a class="pienlace" href="#">Cómo funciona la Búsqueda</a>
+                </div>
+                <div class="piepagina item2">
+                    <a class="pienlace" href="#"><img class="hojita" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC"><span class="arriba">Emisión neutra de carbono desde el 2007</span></a>
+                </div>
+                <div class="piepagina item3">
+                    <a class="pienlace" href="#">Privacidad</a>
+                    <a class="pienlace" href="#">Términos</a>
+                    <a class="pienlace" href="#">Configuración</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
